@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const PORT = process.env.PORT || 3000
 
 //! Set derictories
 const staticDirectary = path.join(__dirname, '../public')
@@ -87,4 +88,4 @@ app.get('*', (req, res) => {
 	})
 })
 
-app.listen(3000, () => console.log('Server is running!'))
+app.listen(PORT, () => console.log('Server is running ' + PORT))

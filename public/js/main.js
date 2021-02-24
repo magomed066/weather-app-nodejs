@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	const url = 'http://localhost:3000/weather'
+	const url = '/weather'
 
 	//? UI
 	const form = document.querySelector('#form')
