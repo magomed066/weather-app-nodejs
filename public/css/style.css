@@ -65,6 +65,10 @@ footer {
     margin: 20px 0;
 }
 
+.forecast {
+    margin-bottom: 20px;
+}
+
 .input-weather {
     outline: none;
     border: 1ps solid #888;

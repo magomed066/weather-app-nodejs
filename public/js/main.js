@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	const btn = document.querySelector('.btn-search')
 	const forecast = document.querySelector('.forecast')
 	const loc = document.querySelector('.location')
+	const max = document.querySelector('.max')
+	const min = document.querySelector('.min')
 
 	//! EVENT FUNCTIONS
 	const fetchData = async (url, location) => {
@@ -31,11 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		fetchData(url, location)
 			.then((data) => {
+				console.log(data)
 				if (data.error) {
 					forecast.textContent = data.error
 				} else {
 					forecast.textContent = data.forecast
 					loc.textContent = data.location
+					max.textContent = `TemperatureMin: ${data.max}`
+					min.textContent = `TemperatureMax: ${data.min}`
 				}
 			})
 			.catch((err) => {
