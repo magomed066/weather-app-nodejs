@@ -31,8 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		fetchData(url, location)
 			.then((data) => {
-				console.log(data.error)
-
 				if (data.error) {
 					forecast.textContent = data.error
 				} else {
